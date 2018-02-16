@@ -47,12 +47,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+  # We have color support; assume it's compliant with Ecma-48
+  # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+  # a case would tend to support setf rather than setaf.)
+  color_prompt=yes
     else
-	color_prompt=
+  color_prompt=
     fi
 fi
 
@@ -121,5 +121,4 @@ fi
 # change prompt
 #PS1="\n\[\e[30;1m\]\[\016\]l\[\017\](\[\e[34;1m\]\u@\h\[\e[30;1m\])-(\[\e[34;1m\]\j\[\e[30;1m\])-(\[\e[34;1m\]\@ \d\[\e[30;1m\])->\[\e[30;1m\]\n\[\016\]m\[\017\]-(\[\[\e[32;1m\]\w\[\e[30;1m\])-(\[\e[32;1m\]\$(/bin/ls -1 | /usr/bin/wc -l | /bin/sed 's: ::g') files, \$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')b\[\e[30;1m\])--> \[\e[0m\]"
 
-PS1="\n\[\e[30;1m\](\[\e[34;1m\]\u\[\e[30;1m\])-(\[\e[34;1m\]jobs:\j\[\e[30;1m\])-(\[\e[34;1m\]hist:\!\[\e[30;1m\])-(\[\e[34;1m\]\w\[\e[30;1m\])\n(\[\e[32;1m\]\@ \d\[\e[30;1m\])-> \[\e[0m\]"
-
+PS1="\n\[\e[30;1m\](\[\e[34;1m\]\u\[\e[30;1m\])-(\[\e[34;1m\]jobs:\j\[\e[30;1m\])-(\[\e[34;1m\]hist:\!\[\e[30;1m\])-(\[\e[34;1m\]\w\[\e[30;1m\])\n(\[\e[32;1m\]\h\[\e[30;1m\])(\[\e[32;1m\]\@ \d\[\e[30;1m\])-> \[\e[0m\]"
