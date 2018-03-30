@@ -95,7 +95,7 @@ set comments=sl:/*,mb:\ *,elx:\ */
 "}}}
 
 " --- Key Binds ---{{{
-let mapleader = ","
+let mapleader = "\\"
 
 " use ctrl-[hjkl] to select the active split
 nnoremap <silent> <c-k> :wincmd k<CR>
