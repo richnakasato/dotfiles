@@ -95,7 +95,7 @@ set comments=sl:/*,mb:\ *,elx:\ */
 "}}}
 
 " --- Key Binds ---{{{
-let mapleader = ","
+let mapleader = "\\"
 
 " use ctrl-[hjkl] to select the active split
 nnoremap <silent> <c-k> :wincmd k<CR>
@@ -104,10 +104,10 @@ nnoremap <silent> <c-h> :wincmd h<CR>
 nnoremap <silent> <c-l> :wincmd l<CR>
 
 " remove trailing whitespace
-nnoremap <Leader>rw :%s/\s\+$//e<CR>
+nnoremap <Leader>rw :%s/\s\+$//e<CR> :set tabstop=2 shiftwidth=2 et<bar>retab<CR>
 
 " retab file
-nnoremap <Leader>rt :set tabstop=2 shiftwidth=2 et<bar>retab<CR>
+nnoremap <Leader>rt :%s/\s\+$//e<CR> :set tabstop=4 shiftwidth=4 et<bar>retab<CR> :w <CR>
 
 " toggle highlight search
 nnoremap <Leader><space> :set hlsearch!<CR>
