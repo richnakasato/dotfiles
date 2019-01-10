@@ -1,7 +1,7 @@
 # Aliases
 
 ## General
-alias ll="ls -alF"
+alias ll="ls -valF"
 alias vi=vim
 alias src="source ~/.bashrc"
 alias bashrc="vim ~/.bashrc"

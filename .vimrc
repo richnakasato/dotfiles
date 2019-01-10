@@ -29,7 +29,7 @@ set nowb " disable write backup
 set cursorline " show cursor row
 "set cursorcolumn " show cursor column
 
-set spell " enable spell check
+set nospell " enable spell check
 set spelllang=en " set language to English
 
 set textwidth=80 " wrap lines at 80 chars
@@ -65,6 +65,12 @@ set colorcolumn=81
 
 " highlight trailing white space
 match ErrorMsg /\s\+$/
+
+" remove no redraw artifact
+if &term =~ '256color'
+  " disable Background Color Erase (BCE)
+  set t_ut=
+endif
 
 "}}}
 
@@ -132,7 +138,7 @@ map <Leader>a :A<CR>
 map <Leader>1 :NERDTreeToggle<CR>
 
 " tag bar toggle (list!)
-map <Leader>2 :TagbarToggle<CR>
+"map <Leader>2 :TagbarToggle<CR>
 
 " quick (zippy) save
 map <Leader>z :mksession! ~/.vim/zippy.vim<CR>
@@ -175,7 +181,7 @@ Plug 'https://github.com/majutsushi/tagbar'
 Plug 'https://github.com/vim-airline/vim-airline'
 
 " snips
-Plug 'https://github.com/SirVer/ultisnips'
+"Plug 'https://github.com/SirVer/ultisnips'
 
 " automatically close brackets
 Plug 'https://github.com/Townk/vim-autoclose'
@@ -204,10 +210,10 @@ Plug 'https://github.com/lrvick/Conque-Shell'
 call plug#end()
 
 " ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<c-tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsListSnippets="<c-tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-j>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " vimwiki
 let g:vimwiki_folding='list'
