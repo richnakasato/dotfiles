@@ -92,6 +92,9 @@ alias l='ls -CF'
 # always want to use vim
 alias vi='vim'
 
+#  even in bash!
+set -o vi
+
 alias lc='/usr/lib/node_modules/leetcode-cli/bin/leetcode'
 
 # Add an "alert" alias for long running commands.  Use like so:

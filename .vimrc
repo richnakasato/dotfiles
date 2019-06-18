@@ -98,6 +98,11 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " intelligent comments
 set comments=sl:/*,mb:\ *,elx:\ */
 
+" pretty print json/html/xml
+command! PrettyPrintJSON %!python -m json.tool
+command! PrettyPrintHTML !tidy -mi -html -wrap 0 %
+command! PrettyPrintXML !tidy -mi -xml -wrap 0 %
+
 "}}}
 
 " --- Key Binds ---{{{
